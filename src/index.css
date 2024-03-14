@@ -1,0 +1,30 @@
+/* @tailwind base; */
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.scrollable-content::-webkit-scrollbar {
+  display: none;
+}
+
+th,
+td {
+  border: 2px solid white !important;
+  padding: 0.5rem;
+}
+
+pre {
+  @apply bg-black/30 p-5 rounded-lg whitespace-pre-wrap break-words;
+}
+
+a {
+  @apply text-white/70;
+}
