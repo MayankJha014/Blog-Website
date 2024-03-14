@@ -3,7 +3,9 @@ import axios from "axios";
 
 export const getAllPosts = createAsyncThunk("getAllPosts", async () => {
   try {
-    const res = await axios.get("https://ps-omega-peach.vercel.app/database");
+    const res = await axios.get(
+      "https://blog-website-lyart-seven.vercel.app/database"
+    );
     if (res.status != 200) {
       throw new Error(res.error);
     }
@@ -16,7 +18,7 @@ export const getAllPosts = createAsyncThunk("getAllPosts", async () => {
 export const getPostTitle = createAsyncThunk("getPostTitle", async (postId) => {
   try {
     const res = await axios.get(
-      `https://ps-omega-peach.vercel.app/title/${postId}`
+      `https://blog-website-lyart-seven.vercel.app/title/${postId}`
     );
     if (res.status != 200) {
       throw new Error(res.error);
@@ -30,7 +32,7 @@ export const getPostTitle = createAsyncThunk("getPostTitle", async (postId) => {
 export const getPageData = createAsyncThunk("getPageData", async (postId) => {
   try {
     const res = await axios.get(
-      `https://ps-omega-peach.vercel.app/page/${postId}`
+      `https://blog-website-lyart-seven.vercel.app/page/${postId}`
     );
     if (res.status != 200) {
       throw new Error(res.error);
@@ -44,7 +46,7 @@ export const getPageData = createAsyncThunk("getPageData", async (postId) => {
 export const getComment = createAsyncThunk("getComment", async (postId) => {
   try {
     const res = await axios.get(
-      `https://ps-omega-peach.vercel.app/comment/${postId}`
+      `https://blog-website-lyart-seven.vercel.app/comment/${postId}`
     );
     if (res.status != 200) {
       throw new Error(res.error);
@@ -57,7 +59,9 @@ export const getComment = createAsyncThunk("getComment", async (postId) => {
 
 export const getTags = createAsyncThunk("getTags", async () => {
   try {
-    const res = await axios.get(`https://ps-omega-peach.vercel.app/tags`);
+    const res = await axios.get(
+      `https://blog-website-lyart-seven.vercel.app/tags`
+    );
     if (res.status != 200) {
       throw new Error(res.error);
     }
@@ -70,7 +74,7 @@ export const getTags = createAsyncThunk("getTags", async () => {
 export const postComment = async (formData) => {
   try {
     const res = await axios.post(
-      "https://ps-omega-peach.vercel.app/comment",
+      "https://blog-website-lyart-seven.vercel.app/comment",
       formData
     );
     console.log(res);
@@ -86,7 +90,9 @@ export const postComment = async (formData) => {
 
 export const getUser = createAsyncThunk("getUser", async () => {
   try {
-    const res = await axios.get(`https://ps-omega-peach.vercel.app/user`);
+    const res = await axios.get(
+      `https://blog-website-lyart-seven.vercel.app/user`
+    );
     console.log(res);
     if (res.status != 200) {
       throw new Error(res.error);
@@ -101,7 +107,7 @@ export const getUser = createAsyncThunk("getUser", async () => {
 export const searchPost = createAsyncThunk("searchPost", async (search) => {
   try {
     const res = await axios.get(
-      `https://ps-omega-peach.vercel.app/search/${search}`
+      `https://blog-website-lyart-seven.vercel.app/search/${search}`
     );
     console.log(res);
     if (res.status != 200) {
@@ -117,7 +123,7 @@ export const searchPost = createAsyncThunk("searchPost", async (search) => {
 export const tagsPosts = createAsyncThunk("tagsPosts", async (search) => {
   try {
     const res = await axios.get(
-      `https://ps-omega-peach.vercel.app/tags/search/${search}`
+      `https://blog-website-lyart-seven.vercel.app/tags/search/${search}`
     );
     console.log(res);
     if (res.status != 200) {

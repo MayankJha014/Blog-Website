@@ -11,7 +11,7 @@ const app = express();
 app.use(
   cors({
     "Access-Control-Allow-Origin": "*", // Specify the allowed headers
-    origin: ["https://ps-fe.vercel.app/"],
+    origin: ["https://blog-website-31b6.vercel.app/"],
     methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
     // allowedHeaders: ["Content-Type", "Authorization"], // Specify the allowed headers
     credentials: true,
