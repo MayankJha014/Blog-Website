@@ -3,9 +3,7 @@ import axios from "axios";
 
 export const getAllPosts = createAsyncThunk("getAllPosts", async () => {
   try {
-    const res = await axios.get(
-      "https://blog-website-lyart-seven.vercel.app/database"
-    );
+    const res = await axios.get(`${process.env.URL}/database`);
     if (res.status != 200) {
       throw new Error(res.error);
     }
@@ -17,9 +15,7 @@ export const getAllPosts = createAsyncThunk("getAllPosts", async () => {
 
 export const getPostTitle = createAsyncThunk("getPostTitle", async (postId) => {
   try {
-    const res = await axios.get(
-      `https://blog-website-lyart-seven.vercel.app/title/${postId}`
-    );
+    const res = await axios.get(`${process.env.URL}/title/${postId}`);
     if (res.status != 200) {
       throw new Error(res.error);
     }
@@ -31,9 +27,7 @@ export const getPostTitle = createAsyncThunk("getPostTitle", async (postId) => {
 
 export const getPageData = createAsyncThunk("getPageData", async (postId) => {
   try {
-    const res = await axios.get(
-      `https://blog-website-lyart-seven.vercel.app/page/${postId}`
-    );
+    const res = await axios.get(`${process.env.URL}/page/${postId}`);
     if (res.status != 200) {
       throw new Error(res.error);
     }
@@ -45,9 +39,7 @@ export const getPageData = createAsyncThunk("getPageData", async (postId) => {
 
 export const getComment = createAsyncThunk("getComment", async (postId) => {
   try {
-    const res = await axios.get(
-      `https://blog-website-lyart-seven.vercel.app/comment/${postId}`
-    );
+    const res = await axios.get(`${process.env.URL}/comment/${postId}`);
     if (res.status != 200) {
       throw new Error(res.error);
     }
@@ -59,9 +51,7 @@ export const getComment = createAsyncThunk("getComment", async (postId) => {
 
 export const getTags = createAsyncThunk("getTags", async () => {
   try {
-    const res = await axios.get(
-      `https://blog-website-lyart-seven.vercel.app/tags`
-    );
+    const res = await axios.get(`${process.env.URL}/tags`);
     if (res.status != 200) {
       throw new Error(res.error);
     }
@@ -73,10 +63,7 @@ export const getTags = createAsyncThunk("getTags", async () => {
 
 export const postComment = async (formData) => {
   try {
-    const res = await axios.post(
-      "https://blog-website-lyart-seven.vercel.app/comment",
-      formData
-    );
+    const res = await axios.post(`${process.env.URL}/comment`, formData);
     console.log(res);
     if (res.status != 200) {
       throw new Error(res.error);
@@ -90,9 +77,7 @@ export const postComment = async (formData) => {
 
 export const getUser = createAsyncThunk("getUser", async () => {
   try {
-    const res = await axios.get(
-      `https://blog-website-lyart-seven.vercel.app/user`
-    );
+    const res = await axios.get(`${process.env.URL}/user`);
     console.log(res);
     if (res.status != 200) {
       throw new Error(res.error);
@@ -106,9 +91,7 @@ export const getUser = createAsyncThunk("getUser", async () => {
 
 export const searchPost = createAsyncThunk("searchPost", async (search) => {
   try {
-    const res = await axios.get(
-      `https://blog-website-lyart-seven.vercel.app/search/${search}`
-    );
+    const res = await axios.get(`${process.env.URL}/search/${search}`);
     console.log(res);
     if (res.status != 200) {
       throw new Error(res.error);
@@ -122,9 +105,7 @@ export const searchPost = createAsyncThunk("searchPost", async (search) => {
 
 export const tagsPosts = createAsyncThunk("tagsPosts", async (search) => {
   try {
-    const res = await axios.get(
-      `https://blog-website-lyart-seven.vercel.app/tags/search/${search}`
-    );
+    const res = await axios.get(`${process.env.URL}/tags/search/${search}`);
     console.log(res);
     if (res.status != 200) {
       throw new Error(res.error);
