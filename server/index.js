@@ -8,7 +8,15 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
-app.use(cors({ "Access-Control-Allow-Origin": "*" }));
+app.use(
+  cors({
+    "Access-Control-Allow-Origin": "*", // Specify the allowed headers
+    origin: ["https://ps-fe.vercel.app/"],
+    methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
+    // allowedHeaders: ["Content-Type", "Authorization"], // Specify the allowed headers
+    credentials: true,
+  })
+);
 
 const DB = process.env.MONGO_DB;
 const databaseId = process.env.NOTION_DB_ID;
