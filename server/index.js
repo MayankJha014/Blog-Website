@@ -11,7 +11,11 @@ const app = express();
 app.use(
   cors({
     "Access-Control-Allow-Origin": "*", // Specify the allowed headers
-    origin: [process.env.URL, "http://localhost:3000"],
+    origin: [
+      process.env.URL,
+      "https://ps-fe.vercel.app",
+      "http://localhost:3000",
+    ],
     methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
     // allowedHeaders: ["Content-Type", "Authorization"], // Specify the allowed headers
     credentials: true,
