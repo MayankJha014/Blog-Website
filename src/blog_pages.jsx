@@ -407,7 +407,7 @@ export const UserIntroCard = () => {
       >
         {user?.data?.name}
       </p>
-      <p style={{ lineHeight: 0 }} className="text-md text-center">
+      <p style={{ lineHeight: 1 }} className="text-md text-center">
         {process.env.USER_CARD_POSITION}
       </p>
       <p className="w-11/12 leading-5 tracking-wide mt-8">
