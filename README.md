@@ -1,8 +1,62 @@
-# React + Vite
+# 📝 Notion Blog Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A feature-rich blog website built using ReactJS, Redux, and the Notion API. This project integrates with Notion to dynamically fetch and display blog posts. It includes a light/dark theme toggle for personalized viewing and a comment feature for user engagement.
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Fetch Posts from Notion:** Automatically fetches and displays blog posts from a specified Notion database.
+- **Light/Dark Theme:** Users can toggle between light and dark modes for a customized reading experience.
+- **Comment Feature:** Allows users to add comments to blog posts, enhancing interaction.
+- **Responsive Design:** Optimized for both desktop and mobile viewing.
+- **Modern UI:** Clean and intuitive design for a great user experience.
+
+## 🛠️ Technologies Used
+
+- **ReactJS**: For building the user interface.
+- **Redux**: For state management.
+- **Notion API**: To fetch content dynamically from Notion.
+- **Axios**: For making HTTP requests to the Notion API.
+- **CSS**: For styling, including light and dark themes.
+- **LocalStorage**: To persist theme preference and comments.
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v14.x or later)
+- npm (v6.x or later)
+- A Notion account and API key
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/yourusername/notion-blog-website.git
+   cd notion-blog-website
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables:**
+
+   Create a `.env` file in the root directory with the following:
+
+   ```plaintext
+   REACT_APP_NOTION_API_KEY=your_notion_api_key
+   REACT_APP_NOTION_DATABASE_ID=your_notion_database_id
+   ```
+
+4. **Start the development server:**
+
+   ```bash
+   npm start
+   ```
+
+   Visit `http://localhost:3000` to see your blog website in action.
+
+### Screenshot
