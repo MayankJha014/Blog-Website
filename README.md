@@ -60,3 +60,6 @@ A feature-rich blog website built using ReactJS, Redux, and the Notion API. This
    Visit `http://localhost:3000` to see your blog website in action.
 
 ### Screenshot
+
+![Screenshot 2024-09-01 163219](https://github.com/user-attachments/assets/e3579f5c-c035-42cd-8eaf-28f232562cd6)
+![Screenshot 2024-09-01 163725](https://github.com/user-attachments/assets/7276e540-7cb2-443a-9eb1-4bd05a1090ad)
